@@ -1,0 +1,32 @@
+# Python & PyTorch
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Data & Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Checkpoints & Logs
+*.pt
+*.pth
+*.log
+runs/
+wandb/
+
+# Output Reports & Local Metadata
+relatorio_walk_forward.md
+experimento_walk_forward.json
+scratch/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
