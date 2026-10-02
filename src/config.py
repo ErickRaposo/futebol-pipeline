@@ -44,13 +44,13 @@ START_DATE = "2013-01-01"  # Data inicial para montagem de tensores de gradiente
 # 4. FEATURE FLAGS E PIPELINE CAUSAL
 # ==============================================================================
 # Odds na sequência histórica dos times (True) ou no vetor da partida atual (False)
-ODDS_SEQUENCIA = False
+ODDS_SEQUENCIA = True
 
 # Atalho direto (skip connection) das odds da partida para os logits finais
 ODDS_SKIP_CONNECTION = False
 
 # Comprimento máximo das sequências históricas
-MAX_SEQ_LEN = 15          # Sequência geral (últimos N jogos)
+MAX_SEQ_LEN = 20          # Sequência geral (últimos N jogos)
 MAX_MANDO_LEN = 8         # Sequência por mando (últimos N jogos casa/fora)
 
 # ==============================================================================
@@ -63,12 +63,12 @@ MATCH_EMBED_DIM = 32
 
 # Loss composta
 EXPOENTE = 0.3            # Expoente de rebalanceamento de classes (class_weight)
-LAMBDA_ORDINAL = 0.2      # Peso da loss auxiliar ordinal por margin ranking
+LAMBDA_ORDINAL = 0.1      # Peso da loss auxiliar ordinal por margin ranking
 
 # Otimização
-LEARNING_RATE = 0.0007
+LEARNING_RATE = 0.0005
 WEIGHT_DECAY = 1e-4
 BATCH_SIZE_TRAIN = 128    # Tamanho de batch para treino (otimizado para GPU/CPU)
 BATCH_SIZE_EVAL = 256     # Tamanho de batch para avaliação
 EPOCHS = 30
-PATIENCE = 5              # Patience do Early Stopping baseado no val_loss
+PATIENCE = 8              # Patience do Early Stopping baseado no val_loss
